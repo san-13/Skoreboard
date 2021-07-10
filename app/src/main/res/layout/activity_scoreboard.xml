@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scoreboard"
+    android:background="@color/pink_light"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/sbteam"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/pink_medium">
+        <TextView
+            android:id="@+id/Teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/teamname" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="1st Innings"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/sbscoretab"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sbteam"
+        android:background="@color/pink_medium">
+        <TextView
+            android:id="@+id/scoretab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/_0_0"
+            android:textSize="36sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/overtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/_10_2_of_20"
+            android:paddingLeft="8dp"
+            android:layout_alignBaseline="@id/scoretab"
+            android:layout_toRightOf="@id/scoretab"/>
+        <TextView
+            android:id="@+id/crr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crr"
+            android:textSize="14sp"
+            android:layout_alignTop="@id/scoretab"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/runrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="0.00"
+            android:layout_alignBaseline="@id/scoretab"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/sbinptab"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sbscoretab"
+        android:background="@color/pink_medium">
+        <CheckBox
+            android:id="@+id/wide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cbwide"
+            android:text="Wide"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp" />
+
+        <CheckBox
+            android:id="@+id/noball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:onClick="cbnoball"
+            android:text="No Ball"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/wide"/>
+
+        <CheckBox
+            android:id="@+id/bye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:onClick="cbbye"
+            android:text="Bye"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/wckt"/>
+
+        <CheckBox
+            android:id="@+id/wckt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Wicket"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/noball"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/sbruntab"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sbinptab"
+        android:background="@color/pink_medium">
+        <Button
+            android:id="@+id/six"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="six"
+            android:text="@string/_6"
+            android:backgroundTint="@color/green_001"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/five"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="five"
+            android:text="@string/_5"
+            android:backgroundTint="@color/green_001"
+            android:layout_alignTop="@+id/six"
+            android:layout_toRightOf="@+id/six"
+            android:layout_marginLeft="15dp"/>
+        <Button
+            android:id="@+id/four"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="four"
+            android:text="@string/_4"
+            android:backgroundTint="@color/green_001"
+            android:layout_alignTop="@+id/six"
+            android:layout_toRightOf="@+id/five"
+            android:layout_marginLeft="15dp" />
+        <Button
+            android:id="@+id/three"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="three"
+            android:text="@string/_3"
+            android:backgroundTint="@color/green_001"
+            android:layout_alignTop="@+id/six"
+            android:layout_toRightOf="@+id/four"
+            android:layout_marginLeft="15dp"/>
+
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="two"
+            android:text="@string/_2"
+            android:backgroundTint="@color/green_001"
+            android:layout_alignTop="@+id/six"
+            android:layout_toRightOf="@+id/three"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="one"
+            android:text="@string/_1"
+            android:backgroundTint="@color/green_001"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="35dp"/>
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="zero"
+            android:text="@string/_0"
+            android:backgroundTint="@color/green_001"
+            android:layout_toRightOf="@+id/one"
+            android:layout_marginLeft="15dp"
+            android:layout_alignTop="@+id/one"/>
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/nxting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="next"
+        android:text="Next Innings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbruntab"
+        android:backgroundTint="@color/green_001"/>
+
+    <CheckBox
+        android:id="@+id/isdeclare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Declare"
+        app:layout_constraintBottom_toTopOf="@+id/nxting"
+        app:layout_constraintEnd_toEndOf="@+id/nxting"
+        app:layout_constraintStart_toStartOf="@+id/nxting"
+        android:layout_marginTop="90dp"
+        app:layout_constraintTop_toBottomOf="@+id/sbruntab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

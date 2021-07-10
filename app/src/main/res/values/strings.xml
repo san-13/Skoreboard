@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SkoreBoard</string>
+    <string name="welcome">Welcome TO SkoreBoard</string>
+    <string name="create_match">Create Match</string>
+    <string name="start_match">Start Match</string>
+    <string name="_4">4</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_0">0</string>
+    <string name="wd2">Wd2</string>
+    <string name="wd">WD</string>
+    <string name="wd4">WD4</string>
+    <string name="wd5">WD5</string>
+    <string name="w">W</string>
+    <string name="_6">6</string>
+    <string name="wd1">Wd1</string>
+    <string name="wd3">Wd3</string>
+    <string name="_3">3</string>
+    <string name="_5">5</string>
+    <string name="nb2">NB2</string>
+    <string name="nb5">NB5</string>
+    <string name="nb4">NB4</string>
+    <string name="nb6">NB6</string>
+    <string name="nb">NB</string>
+    <string name="nb1">NB1</string>
+    <string name="nb3">NB3</string>
+    <string name="_0_0">0 | 0</string>
+    <string name="in_0_0_overs">. </string>
+    <string name="teams">Teams</string>
+    <string name="teamname">Teamname</string>
+    <string name="home_team_wins">Home Team Wins</string>
+    <string name="_10_2_of_20">10.2 of 20</string>
+    <string name="crr">CRR</string>
+</resources>

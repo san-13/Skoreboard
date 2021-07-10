@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchSettings"
+    android:background="@color/pink_light"
+    android:padding="5dp">
+    <TextView
+        android:id="@+id/teams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/teams"
+        android:textSize="20sp"
+        android:textColor="@color/green_001"
+        app:layout_constraintStart_toStartOf="@+id/msteams"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/msteams"
+        app:layout_constraintTop_toBottomOf="@+id/teams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/pink_medium"
+        android:padding="5dp">
+        <EditText
+            android:id="@+id/home_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Home"
+            android:inputType="textPersonName"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:id="@+id/away_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Away"
+            android:inputType="textPersonName"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/home_team"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Overs"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/msover"
+        app:layout_constraintTop_toBottomOf="@+id/msteams" />
+    <RelativeLayout
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:id="@+id/msover"
+        app:layout_constraintTop_toBottomOf="@+id/over"
+        app:layout_constraintStart_toStartOf="@+id/msteams"
+        android:background="@color/pink_medium"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <EditText
+            android:id="@+id/overs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            tools:text="20" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/wickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Wickets"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/mswicket"
+        app:layout_constraintTop_toBottomOf="@+id/msteams" />
+    <RelativeLayout
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:id="@+id/mswicket"
+        app:layout_constraintTop_toBottomOf="@+id/wickets"
+        app:layout_constraintEnd_toEndOf="@+id/msteams"
+        android:background="@color/pink_medium"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <EditText
+            android:id="@+id/wicktet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            tools:text="10" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/pink_medium"
+        android:id="@+id/msbatfirst"
+        app:layout_constraintTop_toBottomOf="@+id/msover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/bat_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Batting First : "
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+        <RadioGroup
+            android:id="@+id/toss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/bat_first">
+
+            <RadioButton
+                android:id="@+id/bhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home" />
+
+            <RadioButton
+                android:id="@+id/baway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Away"
+                android:layout_marginLeft="5dp"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="108dp"
+        android:onClick="MatchStart"
+        android:text="@string/start_match"
+        android:backgroundTint="@color/green_001"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msbatfirst" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
